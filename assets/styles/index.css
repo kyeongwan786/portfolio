@@ -1,0 +1,262 @@
+
+
+
+#tool-bar {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    background-color: #151515;
+    z-index: 10;
+    width: 100%;
+}
+#profile {
+    width: 30rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 0.3rem #0000001A;
+    border-radius: 0.55rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-20rem) translateY(2rem);
+    padding: 2rem;
+
+    opacity: 0;
+}
+#profile.visible {
+    transition-duration: 1s;
+    opacity: 1;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    margin: 0;
+    padding: 0;
+
+}
+#main > .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+
+    margin-bottom: 5rem;
+}
+#main > .layout > .one {
+    margin: 0;
+    padding: 0;
+}
+#main > .layout > .two {
+    margin: 0;
+    padding: 0;
+}
+#main > .layout > .two > .container > .education {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 5rem;
+}
+#main > .layout > .two > .container > .education > .academy {
+    padding-bottom: 5rem;
+    border-bottom: 0.0625rem solid #666666;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#main > .layout > .two > .container > .education > .academy > .ko {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+
+
+}
+#main > .layout > .two > .container > .education > .academy > .ko > .title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+#main > .layout > .two > .container > .education > .academy > .ko > .day {
+    color: #666666;
+    font-size: 1rem;
+}
+#main > .layout > .two > .container > .education >  .academy > .ko > .caption {
+    font-size: 1.25rem;
+    color: #151515;
+    font-weight: 700;
+}
+#main > .layout > .two > .container > .education > .school {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+}
+#main > .layout > .two > .container > .education > .school > .caption {
+    font-size: 1.25rem;
+    color: #666666;
+    font-weight: 500;
+}
+#main > .layout > .two > .container > .education > .school  > .hy {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0.625rem;
+}
+#main > .layout > .two > .container > .education > .school  > .hy > .day {
+    color: #666666;
+    font-size: 1rem;
+}
+#main > .layout > .two > .container > .education > .school  > .hy > .caption {
+    font-size: 1.25rem;
+    color: #151515;
+    font-weight: 700;
+}
+
+#main > .layout > .one > .container > .header {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 2.875rem;
+    border-bottom: 0.0625rem solid #555555;
+    padding-bottom: 5rem;
+}
+#main > .layout > .one > .container > .header > .introduce {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 0.875rem;
+}
+#main > .layout > .one > .container > .header > .introduce > .caption1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #151515;
+}
+#main > .layout > .one > .container > .header > .introduce > .caption {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666666;
+}
+#main > .layout > .one > .container > .header > .img > .image {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+
+
+#profile > .box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 0.525rem;
+}
+#profile > .box > .title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #1976d2;
+    margin-top: 0.5rem;
+}
+#profile > .box > .caption {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 0.625rem;
+}
+#profile > .box > .caption > .tag {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 2rem;
+}
+#profile > .box > .caption > .tag > .caption {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1976d2;
+}
+#profile > .box > .caption > .tag > .link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555555;
+}
+
+#tool-bar > .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+
+    margin: 1rem 1.875rem;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    gap: 5rem;
+}
+
+#tool-bar > .nav > .list > .item > .link {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+#tool-bar > .nav > .list {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+
+    gap: 10rem;
+}
+#main > .layout > .three > .container > .skill > .language > .list {
+    display: grid;
+    grid-template-columns: repeat(3,0.1fr);
+    gap: 3rem;
+}
+#main > .layout > .three > .container > .skill > .language > .list > .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    gap: 1rem;
+    border: 0.0625rem solid #e3f2fd;
+    border-radius: 0.55rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+#main > .layout > .three > .container > .skill > .language > .list > .item:hover {
+    border: 0.0625rem solid #666666;
+}
+#main > .layout > .three > .container > .skill > .language > .list > .item > .image {
+    object-fit: cover;
+    width: 3rem;
+}
+#main > .layout > .three > .container > .skill > .language > .list > .item > .caption {
+    text-align: center;
+}
+#header {
+    height: 80rem;
+    margin: 0;
+    width: 100%;
+}
+#header > .image {
+    width: 1905px;
+    z-index: 1;
+}
+#main > .layout > .three > .container > .skill > .language > .list {
+    border-bottom: 0.0625rem solid #666666;
+    padding-bottom: 5rem;
+    padding-left: 0;
+}
