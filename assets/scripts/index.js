@@ -1,18 +1,17 @@
 const $profile = document.getElementById('profile');
 const $toolbar = document.getElementById('tool-bar');
 const $topAnchor = document.getElementById('topAnchor');
-const $contact = $toolbar.querySelector(':scope > .nav > .list > .item > .contact');
-const $one = document.getElementById('one');
-const $title = document.querySelector(':scope > .header > .header-title > .title')
+const $contact = $toolbar.querySelector('.nav .list .item .contact');
 const $header = document.getElementById('header');
-const $down = $header.querySelector(':scope > .arrow > .arrow');
+const $down = $header.querySelector('.arrow > .arrow');
 const $four = document.getElementById('four');
-const $image = $four.querySelector(':scope > .container > .portfolio > .box > .list > .item > .image-link');
+const $image = $four.querySelector('.container .portfolio .box .list .item .image-link');
+
+let isProfileOpen = false;
 
 $image.addEventListener('click', function(e) {
     e.preventDefault();
 });
-
 
 window.addEventListener('scroll', () => {
     if (document.documentElement.scrollTop > 50) {
@@ -21,50 +20,84 @@ window.addEventListener('scroll', () => {
         $topAnchor.classList.remove('visible');
     }
 });
-document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll(':scope > #tool-bar .nav .list .item .link');
-    navLinks.forEach(link => {
-      if (link.classList.contains('content-btn')) return;
 
-      link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetSection = document.querySelector(targetId);
-          if (targetSection) {
-              window.scrollTo({
-                 top: targetSection.offsetTop,
-                 behavior: "smooth"
-              });
-          }
-       });
-   });
+document.querySelectorAll('#tool-bar .nav .list .item .link').forEach(link => {
+    if (link.classList.contains('content-btn')) return;
+
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: "smooth"
+            });
+        }
+    });
 });
 
-$down.onclick =() => window.scrollTo({top: 1000, behavior: "smooth"});
-
-
-let isProfile = false;
+$down.addEventListener('click', () => {
+    window.scrollTo({top: 1000, behavior: "smooth"});
+});
 
 function toggleProfile(event) {
+    event.preventDefault();
     event.stopPropagation();
-    isProfile ? openProfile() : closeProfile()
+
+    if (isProfileOpen) {
+        closeProfile();
+    } else {
+        openProfile();
+    }
 }
-const openProfile  = () =>{
-    isProfile = true;
+
+function openProfile() {
+    isProfileOpen = true;
     $profile.classList.add('visible');
-};
-const closeProfile = () => {
-    isProfile = false;
+}
+
+function closeProfile() {
+    isProfileOpen = false;
     $profile.classList.remove('visible');
 }
-$contact.onclick = () => openProfile();
 
 $contact.addEventListener('click', toggleProfile);
 
-const profileOutside = () => {
-    if (isProfile===true && !$contact.contains(event.target)) {
+document.addEventListener('click', function(event) {
+
+    if (isProfileOpen && !$profile.contains(event.target) && !$contact.contains(event.target)) {
         closeProfile();
     }
-};
-document.addEventListener('click', profileOutside);
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+   initTextAnimations();
+});
+
+
+function initTextAnimations() {
+    new Textify({
+        el: '[data-textify="welcome"]',
+        animation: {
+            delay: 0.5,
+            duration: 1,
+            animateProps: {
+                opacity: 0
+            }
+        }
+    }, gsap);
+
+    new Textify({
+        el: '[data-textify="name"]',
+        animation: {
+            delay: 1.25,
+            duration: 0.75,
+            ease: 'power2',
+            animateProps: {
+                opacity: 0
+            }
+        }
+    }, gsap);
+
+}
