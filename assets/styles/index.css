@@ -465,7 +465,7 @@
     top: 0;
     font-size: 2.5rem;
     font-weight: 600;
-    color: red;
+    color: #FFFFFF;
     opacity: 0;
     transform: translate(-50%, 100%);
     transition: opacity 3s ease;
@@ -473,7 +473,6 @@
     transition-property: opacity, transform;
     animation-name: text-animation;
     animation-iteration-count: infinite;
-
 }
 #header > .header-title > .rotate > .caption.active {
     opacity: 1;

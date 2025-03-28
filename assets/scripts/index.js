@@ -110,14 +110,16 @@ function initTextAnimations() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const text = $rotate.querySelectorAll(  '.caption');
+    const text = Array.from( $rotate.querySelectorAll(  '.caption'));
+    console.log(text);
     let index = 0;
     text[index].classList.add('active');
 
     setInterval(function() {
         text[index].classList.remove('active');
-        text[index+1].classList.add('active');
         index = (index+1) % text.length;
+        text[index].classList.add('active');
+        console.log(index)
     },500);
 
 
