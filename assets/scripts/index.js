@@ -6,6 +6,7 @@ const $header = document.getElementById('header');
 const $down = $header.querySelector('.arrow > .arrow');
 const $four = document.getElementById('four');
 const $image = $four.querySelector('.container .portfolio .box .list .item .image-link');
+const $rotate =document.getElementById('rotate');
 
 let isProfileOpen = false;
 
@@ -92,7 +93,7 @@ function initTextAnimations() {
         el: '[data-textify="name"]',
         animation: {
             delay: 1.25,
-            duration: 0.75,
+            duration: 0.5,
             ease: 'power2',
             animateProps: {
                 opacity: 0
@@ -100,4 +101,37 @@ function initTextAnimations() {
         }
     }, gsap);
 
+    new Textify({
+        el: '[data-textify="caption"]',
+        animation: {
+            delay: 2,
+            duration: 1.5,
+            ease: 'power2',
+            animateProps: {
+                opacity: 0
+            }
+        }
+    }, gsap);
 }
+let rotateText = [];
+const rotate = (_, counter=0) => {
+ rotateText = $rotate.forEach(text => text.push(text));
+ setInterval(() => {
+     if ((rotateText.length+1) % 3 === 0) {
+
+     }
+
+ });
+
+
+};
+
+
+
+
+
+
+
+
+
+

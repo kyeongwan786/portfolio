@@ -312,6 +312,12 @@
     font-size: 1rem;
     font-weight: 500;
 }
+#tool-bar > .nav > .list > .item > .contact {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
 #tool-bar > .nav > .list {
     display: flex;
     flex-direction: row;
@@ -340,7 +346,7 @@
     cursor: pointer;
     width: 10rem;
     height: 10rem;
-    box-shadow: 0 0.25rem 1.25rem #151515;
+    box-shadow: 0 0.25rem 1.25rem #a7a3a3;
     transition: transform 0.3s ease;
 }
 #main > .layout > .three > .container > .skill > .language > .list > .item:hover {
@@ -381,7 +387,7 @@
     flex-direction: column;
     border-radius: 0.75rem;
     overflow: hidden;
-    box-shadow: 0 0.25rem 1.25rem #151515;
+    box-shadow: 0 0.25rem 1.25rem #a7a3a3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #ffffff;
     height: 100%;
@@ -444,4 +450,24 @@
     color: #666666;
     margin: 0;
 }
+#header > .header-title > .rotate {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+#header > .header-title > .rotate > .caption {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    opacity: 1;
+    transform: translateY(-1rem);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-property: opacity, transform;
+    position: absolute;
+}
+
+
+
+
 
