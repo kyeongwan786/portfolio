@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script defer src="./assets/scripts/index.js" ></script>
 </head>
 <body>
@@ -19,19 +20,19 @@
     <div class="nav">
         <ul class="list">
             <li class="item">
-                <a href="#one" id="introduction" class="link">INTRODUCTION</a>
+                <a href="#one" data-target="#one" id="introduction" class="link">INTRODUCTION</a>
             </li>
             <li class="item">
-                <a href="#two" class="link" data-target="#two">EDUCATION</a>
+                <a href="#two" id="education" class="link" data-target="#two">EDUCATION</a>
             </li>
             <li class="item">
-                <a href="#three" class="link" data-target="three">PORTFOLIO</a>
+                <a href="#three" class="link" data-target="#three">SKILLSET</a>
             </li>
             <li class="item">
-                <a href="#four" class="link" data-target="four">SKILLSET</a>
+                <a href="#four" class="link" data-target="#four">PORTFOLIO</a>
             </li>
             <li class="item">
-                <a href="#" class="contact">CONTACT</a>
+                <a href="#" class="contact" data-target="#five">CONTACT</a>
             </li>
         </ul>
     </div>
@@ -40,14 +41,14 @@
     <div class="header-title">
         <p class="title" data-textify="welcome">안녕하세요!</p>
         <span id="rotate" class="rotate">
-            <span class="caption" data-textify="1" >성장과 배움의 열망이 아주 강한 개발자</span>
-            <span class="caption" data-textify="2">팀원들과의 소통을 중요시하는</span>
-            <span class="caption" data-textify="2">3</span>
+            <span class="caption" data-textify="intro" >성장과 배움의 열망이 강한 개발자</span>
+            <span class="caption" data-textify="intro">팀원들과의 소통을 중요시하는</span>
+            <span class="caption" data-textify="intro">함께 일하고싶은 개발자</span>
         </span>
         <p class="caption" data-textify="name">류경완입니다.</p>
     </div>
     <div class="arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" class="arrow" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="3rem" width="3rem" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
+        <svg xmlns="http://www.w3.org/2000/svg" class="arrow" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="1.875rem" width="1.875rem" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
 <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
 </svg>
     </div>
@@ -140,6 +141,18 @@
                             <li class="item">
                                 <img src="./assets/images/flutter.png" alt="" class="image">
                                 <span class="caption">Flutter</span>
+                            </li>
+                            <li class="item">
+                                <img src="./assets/images/mariadb.png" alt="" class="image">
+                                <span class="caption">MariaDB</span>
+                            </li>
+                            <li class="item">
+                                <img src="./assets/images/react.png" alt="" class="image">
+                                <span class="caption">React</span>
+                            </li>
+                            <li class="item">
+                                <img src="./assets/images/tensorflow.png" alt="" class="image">
+                                <span class="caption">Tensorflow</span>
                             </li>
                         </ul>
                     </div>

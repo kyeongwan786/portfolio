@@ -45,7 +45,7 @@
 }
 
 #header {
-    height: 40rem;
+    height: 30rem;
     margin: 0;
     width: 100%;
     background-color: #151515;
@@ -88,10 +88,12 @@
 
     position: relative;
     transform: translateY(-5rem);
+    gap: 4rem;
 }
 #header > .header-title > .title {
     color: #FFFFFF;
     font-size: 3rem;
+    padding-top: 5rem;
 }
 #header > .header-title > .caption {
     color: #FFFFFF;
@@ -105,7 +107,7 @@
     background-color: #151515;
     z-index: 10;
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
 }
 #profile {
@@ -426,7 +428,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(#000000B3, transparent);
+    background: linear-gradient(to top, #000000B3, transparent);
     color: #ffffff;
     padding: 1rem;
     font-weight: 600;
@@ -454,20 +456,34 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    text-wrap: nowrap;
+    transform: translateY(-3rem);
 }
 #header > .header-title > .rotate > .caption {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #FFFFFF;
-    opacity: 1;
-    transform: translateY(-1rem);
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-    transition-property: opacity, transform;
     position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: red;
+    opacity: 0;
+    transform: translate(-50%, 100%);
+    transition: opacity 3s ease;
+    transition-duration: 0.5s;
+    transition-property: opacity, transform;
+    animation-name: text-animation;
+    animation-iteration-count: infinite;
+
+}
+#header > .header-title > .rotate > .caption.active {
+    opacity: 1;
 }
 
-
-
-
-
+@keyframes text-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
